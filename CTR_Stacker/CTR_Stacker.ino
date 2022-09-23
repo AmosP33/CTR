@@ -34,6 +34,7 @@ int menuSelection;
 bool jumpCheck = false;
 bool stacking = false;
 bool e_stopPressed = false;
+bool jumpingControl = false;
 
 bool step01 = false;
 bool step02 = false;
@@ -81,8 +82,8 @@ struct output {
 // Sensor Inputs Slot 1 ------------------------
 struct input E_Stop         = { slot1, pos01, false };
 struct input stack          = { slot1, pos02, false };
-struct input chain_Deck     = { slot1, pos03, false };
-struct input push_Unit      = { slot1, pos04, false };
+struct input s1Input03      = { slot1, pos03, false };
+struct input deck_Jump_ControlMode  = { slot1, pos04, false };
 struct input joy_Roll_FWD   = { slot1, pos05, false };
 struct input joy_Manual_UP  = { slot1, pos06, false };
 struct input joy_Manual_FWD = { slot1, pos07, false };
@@ -130,9 +131,9 @@ struct output s3Relay08     = { slot3, pos08, false, false };
 
 // Relay Outputs Slot 4 ---------------------------------
 // Motor Control Relays ---------------------------------
-struct output jump_deck_motor  = { slot4, pos01, false, false };  // motor control of starter
-struct output chain_deck_motor = { slot4, pos02, false, false };  // motor control of starter
-struct output s4Relay03 = { slot4, pos03, false, false };
+struct output jump_deck_motor_FWD = { slot4, pos01, false, false };  // motor control of starter
+struct output chain_deck_motor    = { slot4, pos02, false, false };  // motor control of starter
+struct output jump_deck_motor_REV = { slot4, pos03, false, false };
 struct output s4Relay04 = { slot4, pos04, false, false };
 struct output s4Relay05 = { slot4, pos05, false, false };
 struct output s4Relay06 = { slot4, pos06, false, false };
@@ -225,7 +226,7 @@ void loop()
 
   }
 
-  
+
   stacking = false;
 
 }

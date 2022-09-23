@@ -30,8 +30,8 @@ void jumpUnit() {
 
       do {
         checkMove();
-        if (isOff(jump_deck_motor)) {
-          turnOn(&jump_deck_motor);
+        if (isOff(jump_deck_motor_FWD)) {
+          turnOn(&jump_deck_motor_FWD);
         }
 
         if (!E_Stop_Pulled(&E_Stop)) {
@@ -41,7 +41,7 @@ void jumpUnit() {
 
       } while (!btnPressed(&unit_Out));
 
-      turnOff(&jump_deck_motor);
+      turnOff(&jump_deck_motor_FWD);
       turnOff(&jump_Up);
       jumpCheck = true;
 
@@ -70,27 +70,4 @@ void jumpUnit() {
 
     }
   }
-}
-
-
-
-
-
-
-void rollCase01() {
-  // controls the roll cae before the jump deck
-
-
-}
-
-void rollCase02() {
-  // controls the roll case in front of the jump deck
-
-
-}
-
-void rollCase03() {
-  // controls the roll case after the jump roll section
-
-
 }
