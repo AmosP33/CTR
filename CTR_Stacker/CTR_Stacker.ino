@@ -1,9 +1,11 @@
 // Visual Micro is in vMicro>General>Tutorial Mode
 //
 /*
-    Name:       CTR_Stacker.ino
+    Name:     CTR_Stacker.ino
     Created:	9/27/2020 2:28:35 PM
-    Author:     DESKTOP-DNSB2HB\amos_
+    Author:   Amos Parmenter
+
+    This is for Stacker #2 with the jump deck
 */
 
 // Define User Types below here or use a .h file
